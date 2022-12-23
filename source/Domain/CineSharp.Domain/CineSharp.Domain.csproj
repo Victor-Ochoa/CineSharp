@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CineSharp.Domain.Core\CineSharp.Domain.Core.csproj" />
+  </ItemGroup>
+
 </Project>

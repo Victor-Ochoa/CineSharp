@@ -10,4 +10,7 @@ public static class GetSessaoQuery
 
     public static Expression<Func<Sessao, bool>> GetSessaoByData(DateOnly data)
         => x => DateOnly.FromDateTime(x.Data.Date) >= data;
+
+    public static Expression<Func<Sessao, bool>> GetSessaoByFilmeAndData(Guid FilmeId, DateOnly data)
+        => x => x.Filme.Id == FilmeId && DateOnly.FromDateTime(x.Data.Date) >= data;
 }
